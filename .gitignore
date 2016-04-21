@@ -1,0 +1,62 @@
+# -- Symfony 3 -----------------------------------------
+/app/config/parameters.yml
+/build/
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
+
+# -- Composer -----------------------------------------
+composer.phar
+ 
+# -- PHPUnit ------------------------------------------
+app/phpunit.xml  
+ 
+# -- Editores -----------------------------------------
+# phpstorm
+.idea/
+ 
+# sublimetext
+/*.sublime-project
+*.sublime-workspace
+ 
+# netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+ 
+# -- Sistemas Operativos ------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+ 
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~
+ 
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
