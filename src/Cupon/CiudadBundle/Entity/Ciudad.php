@@ -21,8 +21,7 @@ class Ciudad
 
     /** @ORM\Column(type="string", length=100)*/
     protected $name;
-
-
+    
     public function getId()
     {
         return $this->id;
@@ -40,12 +39,17 @@ class Ciudad
 
     public function setSlug($slug)
     {
-        return $this->slug;
+        $this->slug = $slug;
     }
 
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    public function __toString()
+    {
+        return $this->getNombre();
     }
 
 }
