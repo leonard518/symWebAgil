@@ -35,7 +35,7 @@ class Tienda
     /** @ORM\Column(type="text") */
     protected $direccion;
 
-    /** @ORM\MAnyToOne(targetEntity="CuponBundle\Entity\Ciudad") */
+    /** @ORM\ManyToOne(targetEntity="Cupon\CiudadBundle\Entity\Ciudad") */
     protected $ciudad;
 
 
