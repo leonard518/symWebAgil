@@ -98,11 +98,7 @@ class Usuario
      */
     private $numeroTarjeta;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="ciudad", type="string", length=255)
-     */
+    /** @ORM\ManyToOne(targetEntity="Cupon\CiudadBundle\Entity\Ciudad") */
     private $ciudad;
 
 
@@ -387,7 +383,7 @@ class Usuario
      *
      * @return Usuario
      */
-    public function setCiudad($ciudad)
+    public function setCiudad(\Cupon\CiudadBundle\Entity\Ciudad $ciudad)
     {
         $this->ciudad = $ciudad;
 
@@ -402,6 +398,16 @@ class Usuario
     public function getCiudad()
     {
         return $this->ciudad;
+    }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
+
+    public function __construct()
+    {
+        $this->fecha_alta = new \DateTime();
     }
 }
 
