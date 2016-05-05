@@ -11,4 +11,9 @@ class DefaultController extends Controller
     {
         return $this->render('OfertaBundle:Default:ayuda.html.twig');
     }
+    
+    public function portadaAction()
+    {
+        
+    }
 }
