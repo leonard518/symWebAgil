@@ -7,6 +7,11 @@ use Cupon\CiudadBundle\Entity\Ciudad;
 
 class Ciudades implements FixtureInterface
 {
+    public function getOrder()
+    {
+        return 1;
+    }
+
     public function load(ObjectManager $manager)
     {
         $ciudades = array(

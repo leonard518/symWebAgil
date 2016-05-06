@@ -3,7 +3,7 @@ namespace Cupon\OfertaBundle\Util;
 
 class Util
 {
-    static public function getSlug($cadena, $separador)
+    public static function getSlug($cadena, $separador = '-')
     {
         // Código copiado de http://cubiq.org/the-perfect-php-clean-url-generator
         $slug = iconv('UTF-8', 'ASCII//TRANSLIT', $cadena);
