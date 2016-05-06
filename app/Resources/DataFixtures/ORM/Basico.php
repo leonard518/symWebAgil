@@ -69,6 +69,7 @@ class Basico implements FixtureInterface, ContainerAwareInterface
 
                 $tienda = new Tienda();
                 $tienda->setNombre('Tienda #'.$numTienda);
+                $tienda->setSlug($ciudad->getSlug());
                 $tienda->setLogin('tienda'.$numTienda);
                 $tienda->setPassword('password'.$numTienda);
                 $tienda->setSalt(md5(time()));

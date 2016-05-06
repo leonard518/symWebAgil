@@ -45,7 +45,7 @@ class Ciudades implements FixtureInterface
         foreach ($ciudades as $ciudad)
         {
             $entidad = new Ciudad();
-            $entidad->setNombre($ciudad['nombre']);
+            $entidad->setNombre($ciudad);
             $manager->persist($entidad);
         }
 
