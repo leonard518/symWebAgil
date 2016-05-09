@@ -14,6 +14,16 @@ class DefaultController extends Controller
     
     public function portadaAction()
     {
-        return 'Hola Portada';
+        $em = $this->getDoctrine()->getEntityManager();
+        
+        $oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
+            'ciudad'            => 1,
+//            'fecha_publicacion' => new \DateTime('today')
+        ));
+
+        return $this->render(
+            'OfertaBundle:Default:portada.html.twig',
+            array('oferta' => $oferta)
+        );
     }
 }

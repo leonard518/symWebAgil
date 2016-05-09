@@ -1,11 +1,13 @@
 <?php
 namespace Cupon\TiendaBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Cupon\TiendaBundle\Entity\Tienda;
 
-class Tiendas implements FixtureInterface
+class Tiendas extends AbstractFixture implements OrderedFixtureInterface, FixtureInterface
 {
     public function getOrder()
     {

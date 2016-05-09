@@ -2,10 +2,12 @@
 namespace Cupon\CiudadBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Cupon\CiudadBundle\Entity\Ciudad;
 
-class Ciudades implements FixtureInterface
+class Ciudades extends AbstractFixture implements OrderedFixtureInterface, FixtureInterface
 {
     public function getOrder()
     {
