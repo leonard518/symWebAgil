@@ -21,7 +21,7 @@ class DefaultController extends Controller
      */
     public function portadaAction()
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         
         $oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
             'ciudad'            => 1,
@@ -32,5 +32,8 @@ class DefaultController extends Controller
             'OfertaBundle:Default:portada.html.twig',
             array('oferta' => $oferta)
         );
+
+        $log = $this->get('logger');
+        $log->addInfo('Generaba la portada en '.$tiempo.' milisegundos');
     }
 }
