@@ -18,9 +18,9 @@ class DefaultController extends Controller
     }
     
     /**
-     * @Route("/{ciudad}", defaults={"ciudad" = 1}, name="portada", )
+     * @Route("/{ciudad}", defaults={"ciudad" = null}, name="portada" )
      */
-    public function portadaAction($ciudad = null)
+    public function portadaAction($ciudad)
     {
         if ($ciudad == null){
             $ciudad = $this->container
@@ -30,6 +30,7 @@ class DefaultController extends Controller
                 $this->generateUrl('portada', array('ciudad' => $ciudad))
             );
         }
+        
         $em = $this->getDoctrine()->getManager();
         
         $oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
