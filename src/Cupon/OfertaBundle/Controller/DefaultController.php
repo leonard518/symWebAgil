@@ -46,8 +46,5 @@ class DefaultController extends Controller
             'OfertaBundle:Default:portada.html.twig',
             array('oferta' => $oferta)
         );
-
-        $log = $this->get('logger');
-        $log->addInfo('Generaba la portada en '.$tiempo.' milisegundos');
     }
 }
