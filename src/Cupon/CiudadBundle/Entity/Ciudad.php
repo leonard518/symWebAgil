@@ -23,7 +23,7 @@ class Ciudad
     /** @ORM\Column(type="string", length=100)*/
     protected $slug;
 
-    
+
     public function getId()
     {
         return $this->id;
@@ -54,6 +54,6 @@ class Ciudad
     {
         return $this->getNombre();
     }
-    
+
 
 }
