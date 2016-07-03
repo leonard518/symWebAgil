@@ -14,6 +14,15 @@
 </head>
 <body id="{% block id '' %}">
 {% block body %}
+    <footer>
+        &copy; {{ 'now' | date('y') }} - Cupon
+        <a href="{{ path('pagina_estatica', {'pagina': 'ayuda'}) }}">Ayuda</a> |
+        <a href="{{ path('pagina_estatica', {'pagina': 'contacto'}) }}">Contacto</a> |
+        <a href="{{ path('pagina_estatica', {'pagina': 'privacidad'}) }}">Privacidad</a> |
+        <a href="{{ path('pagina_estatica', {'pagina': 'nosotros'}) }}">Sobre nosotros</a>
+    </footer>
+{% endblock %}
+{% block javascripts %}
     <script type="text/javascript" src="{{ asset('assets/js/jquery.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/materialize.min.js') }}"></script>
 {% endblock %}
